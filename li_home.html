@@ -1,0 +1,13 @@
+{% extends 'baseli.html' %}
+{% block content %}
+<form method="post">
+  {{ form.csrf_token }}
+  <div class="form-group">
+    {{ form.x.label }}
+    {{ form.x(class='form-control') }}
+  </div>
+    <div>
+      {{ form.submit(class="btn btn-primary") }}
+    </div>
+</form>
+{% endblock %}
